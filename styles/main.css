@@ -1,0 +1,190 @@
+.main {
+	padding: 20px;
+	z-index: -2;
+}
+
+.main__item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 50px;
+	flex-wrap: wrap;
+	margin-bottom: 50px;
+	width: 100%;
+}
+
+.main__media,
+.main__info {
+	flex: 1 1 200px;
+}
+
+.main__info {
+	border-radius: 8px;
+	padding: 20px;
+}
+
+.info__title {
+	font-size: clamp(1.5rem, 4vw, 2.5rem);
+	font-family: 'Kaushan Script', cursive;
+	letter-spacing: 0.1em;
+}
+
+@property --angle {
+	syntax: '<angle>';
+	initial-value: 0deg;
+	inherits: false;
+}
+
+.main__media {
+	background: #11141f;
+	border-radius: 10px;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 30px 0;
+	box-sizing: content-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.main__media::after,
+.main__media::before {
+	content: '';
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	background-image: conic-gradient(
+		from var(--angle),
+		#ff0080,
+		#ff4000,
+		#ffff00,
+		#00ff80,
+		#0080ff,
+		#8000ff,
+		#ff0080
+	);
+	top: 50%;
+	right: 50%;
+	translate: 50% -50%;
+	z-index: -1;
+	padding: 3px;
+	border-radius: 10px;
+	animation: 3s glow-rotate infinite linear;
+	box-sizing: content-box;
+}
+
+.main__media::before {
+	filter: blur(1.5rem);
+	opacity: 0.5;
+}
+
+.rim {
+	stroke: white;
+	stroke-width: 8px;
+}
+
+#spokes1,
+#spokes2 {
+	stroke: #fff;
+	stroke-width: 2;
+	animation: 4s linear infinite rotate;
+}
+
+#spokes1 {
+	transform-origin: 150px 200px;
+}
+
+#spokes2 {
+	transform-origin: 350px 200px;
+}
+
+#frame {
+	fill: none;
+	stroke: #00bfff;
+	stroke-width: 6;
+	stroke-linejoin: round;
+	stroke-linecap: round;
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes glow-rotate {
+	from {
+		--angle: 0deg;
+	}
+	to {
+		--angle: 360deg;
+	}
+}
+
+.info__description {
+	line-height: 2;
+	font-size: clamp(1rem, 2.5vw, 1.25rem);
+}
+
+/* Smiley*/
+#smiley {
+	fill: #ffdb58;
+}
+
+#eye {
+	fill: #e27258;
+	animation: blink 5s linear infinite;
+	transform-origin: center;
+}
+
+#mouth {
+	fill: none;
+	stroke: #008080;
+	stroke-width: 15px;
+	stroke-linecap: round;
+}
+
+@keyframes blink {
+	0%,
+	85% {
+		transform: scaleY(1);
+	}
+	90%,
+	95% {
+		transform: scaleY(0.05);
+	}
+	100% {
+		transform: scaleY(1);
+	}
+}
+
+/* card */
+#card {
+	fill: #008080;
+}
+
+.line {
+	stroke: #fff;
+	stroke-width: 7px;
+	stroke-linecap: round;
+}
+
+#card__strip {
+	fill: #000;
+}
+
+#bottom {
+	stroke-dasharray: 10 12;
+}
+
+#left__circle {
+	fill: #e27258;
+}
+
+#right__circle {
+	fill: #ffdb58;
+}

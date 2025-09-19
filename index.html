@@ -11,7 +11,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kaushan+Script&display=swap"
 			rel="stylesheet"
 		/>
 		<link
@@ -19,30 +19,237 @@
 			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 		/>
 		<link rel="stylesheet" href="/styles/styles.css" />
+		<link rel="stylesheet" href="/styles/main.css" />
 	</head>
 	<body>
-		<div class="container">
-			<div class="hero">
-				<h1 class="hero__title">Bicycle Paradise</h1>
+		<header class="hero">
+			<div class="container">
+				<h1 class="hero__title">Baiskeli Paradiso</h1>
 
 				<nav class="nav__bar">
 					<ul class="nav__list">
 						<li class="list__item">
-							<a class="item__link" href="#">Home</a>
+							<a class="item__link" href="#community">Home</a>
 						</li>
 						<li class="list__item">
-							<a class="item__link" href="#">Fun</a>
+							<a class="item__link" href="#fun">Fun</a>
 						</li>
 						<li class="list__item">
-							<a class="item__link" href="#">Pay</a>
+							<a class="item__link" href="#benefit">Benefits</a>
 						</li>
 					</ul>
 				</nav>
-
-				<svg id="logo" width="60" height="60" viewBox="0 0 120 120">
-					<use href="/svgs/logo.svg" />
-				</svg>
 			</div>
-		</div>
+
+			<svg id="logo" width="50" height="50" viewBox="0 0 120 120">
+				<use href="/svgs/logo.svg" />
+			</svg>
+		</header>
+
+		<main class="container main">
+			<section id="community" class="main__item">
+				<div class="main__media">
+					<svg
+						class="media__item"
+						viewBox="0 0 500 400"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<!-- Left wheel -->
+						<g class="wheel">
+							<circle class="rim outer" cx="150" cy="200" r="60"></circle>
+							<circle class="rim inner" cx="150" cy="200" r="4" />
+							<g id="spokes1">
+								<path d="M150 150 L150 175" />
+								<path d="M150 150 L150 175" transform="rotate(45 150 200)" />
+								<path d="M150 150 L150 175" transform="rotate(90 150 200)" />
+								<path d="M150 150 L150 175" transform="rotate(135 150 200)" />
+								<path d="M150 150 L150 175" transform="rotate(180 150 200)" />
+								<path d="M150 150 L150 175" transform="rotate(225 150 200)" />
+								<path d="M150 150 L150 175" transform="rotate(270 150 200)" />
+								<path d="M150 150 L150 175" transform="rotate(315 150 200)" />
+							</g>
+						</g>
+
+						<!-- Right wheel -->
+						<g class="wheel">
+							<circle class="rim outer" cx="350" cy="200" r="60"></circle>
+							<circle class="rim inner" cx="350" cy="200" r="4" />
+							<g id="spokes2">
+								<path d="M350 150 L350 175" />
+								<path d="M350 150 L350 175" transform="rotate(45 350 200)" />
+								<path d="M350 150 L350 175" transform="rotate(90 350 200)" />
+								<path d="M350 150 L350 175" transform="rotate(135 350 200)" />
+								<path d="M350 150 L350 175" transform="rotate(180 350 200)" />
+								<path d="M350 150 L350 175" transform="rotate(225 350 200)" />
+								<path d="M350 150 L350 175" transform="rotate(270 350 200)" />
+								<path d="M350 150 L350 175" transform="rotate(315 350 200)" />
+							</g>
+						</g>
+
+						<!-- Bike frame -->
+						<g id="frame">
+							<line x1="150" y1="200" x2="300" y2="120" />
+							<line x1="150" y1="200" x2="250" y2="200" />
+							<line x1="250" y1="200" x2="300" y2="120" />
+							<line x1="250" y1="200" x2="350" y2="200" />
+							<line x1="300" y1="120" x2="350" y2="200" />
+							<line x1="300" y1="120" x2="320" y2="80" />
+							<line x1="320" y1="80" x2="350" y2="200" />
+
+							<!-- Pedals area -->
+							<circle
+								cx="250"
+								cy="200"
+								r="8"
+								fill="none"
+								stroke="#00bfff"
+								stroke-width="3"
+							/>
+						</g>
+
+						<!-- Head lamp (bike light) -->
+						<g id="headlamp">
+							<rect
+								x="315"
+								y="85"
+								width="10"
+								height="6"
+								fill="#333"
+								stroke="#666"
+								stroke-width="1"
+								rx="2"
+							/>
+							<!-- Main light body -->
+							<ellipse
+								cx="320"
+								cy="88"
+								rx="8"
+								ry="5"
+								fill="#2a2a2a"
+								stroke="#666"
+								stroke-width="1"
+							/>
+							<!-- Light lens -->
+							<ellipse
+								cx="320"
+								cy="88"
+								rx="6"
+								ry="3.5"
+								fill="url(#lightGradient)"
+								stroke="#ddd"
+								stroke-width="0.5"
+							/>
+							<!-- Light beam effect -->
+							<polygon
+								points="320,88 380,75 380,101"
+								fill="url(#beamGradient)"
+								opacity="0.6"
+							/>
+						</g>
+
+						<!-- Gradients for realistic light effect -->
+						<defs>
+							<radialGradient id="lightGradient" cx="30%" cy="30%">
+								<stop offset="0%" stop-color="#fff" />
+								<stop offset="70%" stop-color="#f0f8ff" />
+								<stop offset="100%" stop-color="#e0e8f0" />
+							</radialGradient>
+							<linearGradient
+								id="beamGradient"
+								x1="0%"
+								y1="0%"
+								x2="100%"
+								y2="0%"
+							>
+								<stop offset="0%" stop-color="#fff" stop-opacity="0.8" />
+								<stop offset="100%" stop-color="#fff" stop-opacity="0.1" />
+							</linearGradient>
+						</defs>
+					</svg>
+				</div>
+				<div class="main__info">
+					<h2 class="info__title">Community</h2>
+					<p class="info__description">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ad
+						repellendus consequatur quae dicta sit error sed minima itaque ea
+						nostrum, dolorem praesentium? Inventore cum nesciunt quis omnis
+						veniam deleniti.
+					</p>
+				</div>
+			</section>
+
+			<section id="fun" class="main__item">
+				<div class="main__info">
+					<h2 class="info__title">Fun</h2>
+					<p class="info__description">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ad
+						repellendus consequatur quae dicta sit error sed minima itaque ea
+						nostrum, dolorem praesentium? Inventore cum nesciunt quis omnis
+						veniam deleniti.
+					</p>
+				</div>
+
+				<div class="main__media">
+					<svg
+						class="media__item"
+						viewBox="0 0 500 400"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<circle id="smiley" cx="250" cy="200" r="150" />
+
+						<g id="eye">
+							<circle cx="190" cy="150" r="30" />
+							<circle cx="310" cy="150" r="30" />
+						</g>
+
+						<path id="mouth" d="M180 250 Q250 280 320 250" />
+					</svg>
+				</div>
+			</section>
+
+			<section id="benefit" class="main__item">
+				<div class="main__media">
+					<svg
+						class="media__item"
+						viewBox="0 0 500 400"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<rect
+							id="card"
+							width="300"
+							height="200"
+							x="100"
+							y="100"
+							rx="20"
+							ry="20"
+						/>
+
+						<rect id="card__strip" width="300" height="50" x="100" y="120" />
+
+						<g class="line">
+							<g class="line">
+								<path d="M120 190 L160 190" />
+								<path d="M180 190 L220 190" />
+							</g>
+							<line id="bottom" x1="120" y1="210" x2="220" y2="210" />
+						</g>
+
+						<g>
+							<circle id="left__circle" cx="310" cy="250" r="35" />
+							<circle id="right__circle" cx="350" cy="250" r="35" />
+						</g>
+					</svg>
+				</div>
+				<div class="main__info">
+					<h2 class="info__title">Benefits</h2>
+					<p class="info__description">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ad
+						repellendus consequatur quae dicta sit error sed minima itaque ea
+						nostrum, dolorem praesentium? Inventore cum nesciunt quis omnis
+						veniam deleniti.
+					</p>
+				</div>
+			</section>
+		</main>
 	</body>
 </html>
