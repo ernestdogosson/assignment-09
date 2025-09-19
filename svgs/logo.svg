@@ -1,0 +1,36 @@
+<svg 
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 120 120"
+		>
+			<polygon
+				points="20,20  90,20, 20,90"
+				style="
+					fill: #e2725b;
+					stroke: #e2725b;
+					stroke-width: 2;
+					stroke-linejoin: round;
+				"
+			/>
+			<polygon
+				id="polygon01"
+				points="90,27  59,58 90,90"
+				style="
+					fill: #ffdb58;
+					stroke: #ffdb58;
+					stroke-width: 2;
+					stroke-linejoin: round;
+				"
+			/>
+			<polygon
+				points="27,90  55,62 83,90"
+				style="
+					fill: #008080;
+					stroke: #008080;
+					stroke-width: 2;
+					stroke-linejoin: round;
+				"
+			/>
+		</svg>
+
+
+		

@@ -3,3 +3,86 @@
 *::after {
 	box-sizing: border-box;
 }
+
+body {
+	background: #11141f;
+	color: white;
+	margin: 0;
+	font-family: 'Inter', sans-serif;
+	padding-bottom: 2000px;
+}
+
+/* Hero */
+
+.hero {
+	width: 100%;
+	height: 50vh;
+	border-bottom: solid 2px white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.hero::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: url(../images/hero-background1.jpg);
+	background-position: center;
+	background-size: cover;
+	filter: blur(4px);
+	z-index: -1;
+}
+
+#logo {
+	position: fixed;
+	left: 0;
+	top: 0;
+}
+
+.hero__title {
+	font-size: 7vw;
+	color: #fff;
+}
+
+.nav__bar {
+	width: 40%;
+}
+
+.nav__bar .nav__list {
+	display: flex;
+	list-style: none;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.item__link {
+	text-decoration: none;
+	padding: 0;
+	margin: 0;
+	color: #fff;
+	padding: 10px 20px;
+	font-size: 18px;
+	font-weight: 600;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: all 0.15s ease;
+}
+
+.item__link:hover {
+	color: #11141f;
+	background-color: #fff;
+}
+
+.list__item {
+	transition: transform 0.15s ease;
+}
+
+.list__item:active {
+	transform: scale(1.2);
+}
