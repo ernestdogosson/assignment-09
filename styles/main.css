@@ -79,6 +79,8 @@
 	opacity: 0.5;
 }
 
+/* Bicycle */
+
 .rim {
 	stroke: white;
 	stroke-width: 8px;
@@ -130,7 +132,7 @@
 	font-size: clamp(1rem, 2.5vw, 1.25rem);
 }
 
-/* Smiley*/
+/* Smiley */
 #smiley {
 	fill: #ffdb58;
 }

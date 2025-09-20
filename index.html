@@ -18,8 +18,13 @@
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+		/>
 		<link rel="stylesheet" href="/styles/styles.css" />
 		<link rel="stylesheet" href="/styles/main.css" />
+		<link rel="stylesheet" href="/styles/footer.css" />
 	</head>
 	<body>
 		<header class="hero">
@@ -49,6 +54,7 @@
 		<main class="container main">
 			<section id="community" class="main__item">
 				<div class="main__media">
+					<!-- Bicycle -->
 					<svg
 						class="media__item"
 						viewBox="0 0 500 400"
@@ -72,7 +78,7 @@
 
 						<!-- Right wheel -->
 						<g class="wheel">
-							<circle class="rim outer" cx="350" cy="200" r="60"></circle>
+							<circle class="rim outer" cx="350" cy="200" r="60" />
 							<circle class="rim inner" cx="350" cy="200" r="4" />
 							<g id="spokes2">
 								<path d="M350 150 L350 175" />
@@ -147,7 +153,7 @@
 							/>
 						</g>
 
-						<!-- Gradients for realistic light effect -->
+						<!-- Gradients light effect -->
 						<defs>
 							<radialGradient id="lightGradient" cx="30%" cy="30%">
 								<stop offset="0%" stop-color="#fff" />
@@ -251,5 +257,44 @@
 				</div>
 			</section>
 		</main>
+		<footer class="page__footer">
+			<div class="footer__container">
+				<div class="footer__info">
+					<span><i class="fa-solid fa-location-dot"></i> Helsingborg</span>
+					<span><i class="fa-solid fa-phone"></i> 7404287782</span>
+					<span><i class="fa-solid fa-envelope"></i> baiskeli@example.com</span>
+				</div>
+
+				<div class="footer__links">
+					<a href="#about">About</a>
+					<a href="#services">Services</a>
+					<a href="#contact">Contact</a>
+					<a href="#privacy">Privacy</a>
+				</div>
+
+				<ul class="socials__nav-bar">
+					<li class="socials__item">
+						<a href="#" class="socials__item-link"
+							><i class="fa-brands fa-facebook-f"></i
+						></a>
+					</li>
+					<li class="socials__item">
+						<a href="#" class="socials__item-link"
+							><i class="fa-brands fa-instagram"></i
+						></a>
+					</li>
+					<li class="socials__item">
+						<a href="#" class="socials__item-link"
+							><i class="fa-brands fa-bluesky"></i
+						></a>
+					</li>
+					<li class="socials__item">
+						<a href="#" class="socials__item-link"
+							><i class="fa-brands fa-youtube"></i
+						></a>
+					</li>
+				</ul>
+			</div>
+		</footer>
 	</body>
 </html>
